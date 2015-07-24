@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zumomusicstore", "zumomusicstore\zumomusicstore.csproj", "{3AFA591D-C115-4AC9-9519-F788373ECDE9}"
 EndProject
@@ -79,6 +79,7 @@ Global
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Release|x86.ActiveCfg = Release|iPhoneSimulator
 		{34B9099E-4B00-4707-BFDE-0B95997F8893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34B9099E-4B00-4707-BFDE-0B95997F8893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B9099E-4B00-4707-BFDE-0B95997F8893}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{34B9099E-4B00-4707-BFDE-0B95997F8893}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{34B9099E-4B00-4707-BFDE-0B95997F8893}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{34B9099E-4B00-4707-BFDE-0B95997F8893}.Debug|iPhone.Build.0 = Debug|Any CPU

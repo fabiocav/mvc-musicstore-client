@@ -1,6 +1,7 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using zumomusicstore.Views;
 
 namespace zumomusicstore
 {
@@ -9,7 +10,7 @@ namespace zumomusicstore
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new TodoList();
+			MainPage = new StoreView(new ViewModels.StoreViewModel());
 		}
 
 		protected override void OnStart ()

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zumomusicstore.Views.StoreView">
+    <Grid Padding="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="{Binding MainText}" VerticalOptions="Center" FontSize="35"/>
+        <Label Text="Popular records" VerticalOptions="Center" Font="Large" Grid.Row="1"/>
+        <ListView ItemsSource="{Binding PopularAlbums}" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding AlbumArtUrl}"
+                               Text="{Binding Title}" Detail="{Binding ArtistName}" >
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Text="Browse by genre" Font="Large" Grid.Row="3"/>
+        <ListView ItemsSource="{Binding Genres}" Grid.Row="4">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Description}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
