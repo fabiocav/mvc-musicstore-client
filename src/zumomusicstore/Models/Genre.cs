@@ -20,7 +20,6 @@ namespace zumomusicstore.Models
             {
                 return name;
             }
-
             set
             {
                 this.name = value;

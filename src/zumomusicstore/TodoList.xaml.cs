@@ -8,13 +8,13 @@ namespace zumomusicstore
 {
 	public partial class TodoList : ContentPage
 	{
-		TodoItemManager manager;
+		MusicStoreManager manager;
 
 		public TodoList ()
 		{
 			InitializeComponent ();
 
-			manager = new TodoItemManager ();
+			manager = new MusicStoreManager ();
 		}
 
 		protected override async void OnAppearing ()

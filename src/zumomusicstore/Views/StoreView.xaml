@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:zumomusicstore"
              x:Class="zumomusicstore.Views.StoreView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:AlbumImageValueConverter x:Key="AlbumImageValueConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <Grid Padding="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -12,10 +18,10 @@
         </Grid.RowDefinitions>
         <Label Text="{Binding MainText}" VerticalOptions="Center" FontSize="35"/>
         <Label Text="Popular records" VerticalOptions="Center" Font="Large" Grid.Row="1"/>
-        <ListView ItemsSource="{Binding PopularAlbums}" Grid.Row="2">
+        <ListView ItemsSource="{Binding PopularAlbums}" Grid.Row="2" ItemTapped="OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell ImageSource="{Binding AlbumArtUrl}"
+                    <ImageCell ImageSource="{Binding AlbumArtUrl, Converter={StaticResource AlbumImageValueConverter}}"
                                Text="{Binding Title}" Detail="{Binding ArtistName}" >
                     </ImageCell>
                 </DataTemplate>

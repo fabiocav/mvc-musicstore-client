@@ -9,8 +9,8 @@ namespace zumomusicstore
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new StoreView(new ViewModels.StoreViewModel());
+            // The root page of your application
+            MainPage = new NavigationPage(new StoreView(new ViewModels.StoreViewModel()));
 		}
 
 		protected override void OnStart ()

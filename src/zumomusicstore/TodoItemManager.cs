@@ -9,20 +9,20 @@ namespace zumomusicstore
 	/// <summary>
 	/// Manager classes are an abstraction on the data access layers
 	/// </summary>
-	public class TodoItemManager
+	public class MusicStoreManager
 	{
 		// Azure
 		IMobileServiceTable<TodoItem> todoTable;
 		MobileServiceClient client;
 
-		public TodoItemManager()
+		public MusicStoreManager()
 		{
 			client = new MobileServiceClient(
 				Constants.ApplicationURL,
+                Constants.GatewayURL,
 				Constants.ApplicationKey);
 
 			this.todoTable = client.GetTable<TodoItem>();
-
 		}
 //		public ToDoItem GetTaskFromList(string id)
 //		{

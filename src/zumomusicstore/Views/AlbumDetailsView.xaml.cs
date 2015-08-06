@@ -5,23 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using zumomusicstore.Models;
 using zumomusicstore.ViewModels;
 
 namespace zumomusicstore.Views
 {
-    public partial class StoreView : ContentPage
+    public partial class AlbumDetailsView : ContentPage
     {
-        public StoreView(StoreViewModel viewModel)
+        public AlbumDetailsView(AlbumDetailsViewModel viewModel)
         {
             this.BindingContext = viewModel;
 
             InitializeComponent();
-        }
-
-        public void OnItemTapped(object sender, ItemTappedEventArgs args)
-        {
-            ((StoreViewModel)this.BindingContext).NavigateToAlbum(Navigation, args.Item as Album);
         }
     }
 }
